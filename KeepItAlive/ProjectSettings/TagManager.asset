@@ -7,6 +7,7 @@ TagManager:
   - LargeTile
   - LevelChanger
   - DangerousTile
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -16,9 +17,9 @@ TagManager:
   - UI
   - 
   - 
-  - Road
+  - RoadTile
+  - FieldTile
   - Terrain
-  - 
   - 
   - 
   - 

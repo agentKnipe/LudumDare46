@@ -3,36 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterWorldController : MonoBehaviour{
-    public Animator Animator;
-    CharacterController characterController;
+    private Vector3 moveDirection = Vector3.zero;
+    private CharacterController characterController;
 
+    public Animator Animator;
     public float speed = 6.0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
-
-    private Vector3 moveDirection = Vector3.zero;
+    public bool IsWalking = false;
+    
 
     // Start is called before the first frame update
     void Start(){
         characterController = GetComponent<CharacterController>();
     }
 
+    int buttonClick = 0;
+
     // Update is called once per frame
     void Update(){
-
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
         Look(Input.GetAxis("Horizontal"));
 
         moveDirection *= speed;
 
         // Move the controller
-        if(moveDirection != Vector3.zero) {
+        if (moveDirection != Vector3.zero) {
+            IsWalking = true;
             //Look(moveDirection);
             characterController.Move(moveDirection * Time.deltaTime);
-            Animator.SetBool("IsWalking", true);
+            Animator.SetBool("IsWalking", IsWalking);
         }
         else {
-            Animator.SetBool("IsWalking", false);
+            IsWalking = false;
+            Animator.SetBool("IsWalking", IsWalking);
         }
     }
 

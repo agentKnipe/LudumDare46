@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{D21A7A22-0B50-0E8C-FA3E-9AE1920C1642}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -120,6 +119,7 @@
     <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\CollectableBounce.cs" />
     <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\Door.cs" />
+    <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\ExitPoint.cs" />
     <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\FadeScript.cs" />
     <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\MenuButtons.cs" />
     <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\PlayerMovement.cs" />
@@ -127,13 +127,34 @@
     <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\Tile.cs" />
     <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\TimedAnimations.cs" />
     <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\Trigger.cs" />
+    <Compile Include="Assets\Scripts\Attack.cs" />
+    <Compile Include="Assets\Scripts\CharacterFightTrigger.cs" />
     <Compile Include="Assets\Scripts\CharacterWorldController.cs" />
+    <Compile Include="Assets\Scripts\CombatView\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\CombatView\EnemyPrefabEnumMapper.cs" />
+    <Compile Include="Assets\Scripts\CombatView\EnemySelect.cs" />
+    <Compile Include="Assets\Scripts\CombatView\HeroController.cs" />
+    <Compile Include="Assets\Scripts\CombatView\HeroPrefabEnumMapper.cs" />
+    <Compile Include="Assets\Scripts\CombatView\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\CombatView\PrincessController.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enums\EnemyTypes.cs" />
+    <Compile Include="Assets\Scripts\Enums\HeroTypes.cs" />
+    <Compile Include="Assets\Scripts\GameState.cs" />
+    <Compile Include="Assets\Scripts\Hero.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IHitable.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\ISelectable.cs" />
     <Compile Include="Assets\Scripts\LevelGeneration.cs" />
     <Compile Include="Assets\Scripts\LevelState.cs" />
+    <Compile Include="Assets\Scripts\Levels.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\PopupMenu.cs" />
+    <Compile Include="Assets\Scripts\Princess.cs" />
     <Compile Include="Assets\Scripts\RoadType.cs" />
+    <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\SpawnTiles.cs" />
-    <Compile Include="Assets\Scripts\animate.cs" />
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
+    <None Include="Assets\Hero and Opponents\license.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>S:/Projects/Unity/LudumDare46/KeepItAlive/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
